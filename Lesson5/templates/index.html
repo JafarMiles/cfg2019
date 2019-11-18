@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<h1>Welcome to Chatter</h1>
+<h2>The internets favour Twitter knock off!</h2>
+
+<p>So being a cheap imitation knock off of Twitter you can chat a status</p>
+<p>See the chatter feed below!</p>
+
+<form method="post" action="/addnote">
+    <h2>What do you want to say?</h2>
+    <label for="status">Status</label>
+    <input type="text" name="status"/>
+    <label for="username">Your name</label>
+    <input type="text" name="username"/>
+    <input type="submit"/>
+</form>
+
+<h2>Chatter Feed</h2>
+
+<div>
+    {% for item in feed %}
+    <div><b>{{item.username}}</b> chatted <b>{{item.status}}</b> at <b>{{item.time}}</b></div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
