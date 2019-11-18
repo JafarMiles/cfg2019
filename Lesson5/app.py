@@ -3,7 +3,7 @@ from datetime import datetime
 
 app = Flask("ToyApp")
 
-statusList = [{'status':'hello world', 'username': 'Jaf', 'time': '18:40'}, {'status': 'yes please', 'username': 'Jaf', 'time': '18:42'}]
+statusList = [{'status': 'hello world', 'username': 'Jaf', 'time': '18:40'}, {'status': 'yes please', 'username': 'Jaf', 'time': '18:42'}]
 
 
 @app.route("/")
