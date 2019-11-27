@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
+
+    <title>Lesson 5: Chatter</title>
+
+    <link rel="stylesheet" href="{{ url_for('static',    filename='css/template.css') }}">
 </head>
 <body>
 <h1>Welcome to Chatter</h1>
@@ -17,6 +20,10 @@
     <input type="text" name="status"/>
     <label for="username">Your name</label>
     <input type="text" name="username"/>
+
+    <label for="mood">Mood</label>
+    <input type="text" name="mood" />
+
     <input type="submit"/>
 </form>
 
@@ -24,7 +31,7 @@
 
 <div>
     {% for item in feed %}
-    <div><b>{{item.username}}</b> chatted <b>{{item.status}}</b> at <b>{{item.time}}</b></div>
+    <div><b>{{item.username}}</b> chatted <b>{{item.status}}</b> and is feeling <b>{{item.mood}}</b> at <b>{{item.time}}</b></div>
     {% endfor %}
 </div>
 
